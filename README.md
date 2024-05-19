@@ -13,12 +13,6 @@ Pour notre projet, nous aurons besoin des bibliothèques suivantes :
 
 # I- Capture de notre écran
 
-Dans un premier temps, pour pouvoir automatiser notre jeu Piano Tiles, nous devons pouvoir récupérer l’image de notre écran en continu. 
-
-Pour cela, à travers une boucle infinie, nous effectuons une capture d’écran avec la bibliothèque Pillow : `img = ImageGrab.grab()`. Nous obtenons alors des images au format `PIL.Image`.
-
-Nous convertissons ensuite l'image PIL en un tableau NumPy pour facilement la traiter avec OpenCV : `img_np = np.array(img)`. Nous obtenons alors un tableau qui contient la valeur des pixels de notre capture d’écran. Dans mon cas, la dimension de l’écran est de 1920x1080.
-
 Dans un premier temps, pour pouvoir automatiser notre jeu Piano Tiles, nous devons pouvoir récupérer l’image de notre écran en continu.
 
 Pour cela, à travers une boucle infinie, nous effectuons une capture d’écran avec la bibliothèque Pillow : `img = ImageGrab.grab()`. Nous obtenons alors des images au format `PIL.Image`.
