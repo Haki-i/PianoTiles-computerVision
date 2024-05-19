@@ -13,7 +13,7 @@ Pour notre projet, nous aurons besoin des bibliothèques suivantes :
 
 # I- Capture de notre écran
 
-Dans un premier temps, pour pouvoir automatiser notre jeu Piano Tiles, nous devons pouvoir récupérer l’image de notre écran en continu.
+Dans un premier temps, pour pouvoir automatiser notre jeu Piano Tiles, nous devons récupérer l’image de notre écran en continu.
 
 Pour cela, à travers une boucle infinie, nous effectuons une capture d’écran avec la bibliothèque Pillow : `img = ImageGrab.grab()`. Nous obtenons alors des images au format `PIL.Image`.
 
@@ -42,7 +42,7 @@ Enfin, nous utilisons la méthode `inRange()` pour créer un masque de couleur.
 frameMask = cv2.inRange(frameBlur, LOWER, HIGHER)
 ```
 
-`LOWER` et `HIGHER` sont deux tuples qui nous permettent d'isoler une certaine couleur dans notre image, dans ce cas le noir. Nous devons spécifier les plages de teinte, de saturation et de valeur de cette couleur. `LOWER` et `HIGHER` définissent les limites inférieure et supérieure de la plage de couleurs que nous cherchons à détecter.
+`LOWER` et `HIGHER` sont deux tuples qui nous permettent d'isoler une certaine couleur dans notre image, dans ce cas le noir. Nous devons spécifier les plages de teinte, de saturation et de valeur de cette couleur. `LOWER` et `HIGHER` définissent les limites inférieures et supérieures de la plage de couleurs que nous cherchons à détecter.
 
 En effectuant cela, nous créons un masque binaire où les pixels de l'image HSV qui se trouvent dans la plage de couleurs que nous avons définie sont mis à 255 (apparaissent donc en blanc), tandis que tous les autres pixels sont mis à 0 (apparaissent donc en noir).
 
